@@ -4,13 +4,13 @@
 </h4>
 
 <p align="center">
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/meme-generator/AirCnc.svg">
-
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/LeoDalcegio/meme-generator.svg">
+  
   <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
 </p>
 
 <br>
 
 <p align="center">
-  <img alt="how you doin'" src=".github/how-you-doin.png" width="100%">
+  <img alt="how you doin'" src=".github/how-you-doin.PNG" width="100%">
 </p>
