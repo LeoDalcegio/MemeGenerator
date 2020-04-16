@@ -16,3 +16,16 @@ header > p {
     font-size: 50px;
     margin-left: 60px;
 }
+
+@media (max-width: 700px) 
+{
+    header > p {
+        margin-left: 15px;
+        font-size: 35px;
+    }
+    
+    header > img {
+        height: 70%;
+        margin-left: 5%;
+    }
+}

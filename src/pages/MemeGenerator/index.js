@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import html2canvas from 'html2canvas';
 
 import './styles.css';
 
@@ -32,6 +33,17 @@ class MemeGenerator extends Component {
         this.setState({randomImg: randomMemeImg})
     }
 
+    handleDownload = () => {
+        html2canvas(document.body).then(function(canvas) {
+            document.querySelector('#download-image').setAttribute('href',canvas.toDataURL('image/jpg'));
+            document.querySelector('#download-image').setAttribute('download', 'image.jpg');
+        });
+
+        var a = document.querySelector('#download-image');
+
+        a.click();
+    }
+
     render() {
         return(
             <div>
@@ -52,12 +64,14 @@ class MemeGenerator extends Component {
                         onChange={this.handleChange}
                     />
 
-                    <button>Generate</button>
+                    <button type="submit">Generate</button>
 
-                    <button>Download</button>
+                    <button type="button" onClick={this.handleDownload}>Download</button>
                 </form>
                 <div className='meme'>
-                    <img src={this.state.randomImg} alt='' />
+                    <img id="img" src={this.state.randomImg} alt='' />
+                    <a id="download-image" href="#"/>
+
                     <h2 className='top'>{this.state.topText}</h2>
                     <h2 className='bottom'>{this.state.bottomText}</h2>
                 </div>
