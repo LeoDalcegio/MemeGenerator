@@ -2,7 +2,7 @@ import React from 'react';
 
 import './styles.css';
 
-function Header() {
+export default function Header() {
     return(
     <header>
         <img 
@@ -13,5 +13,3 @@ function Header() {
     </header>
   );
 }
-
-export default Header;
