@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
+import Meme from '../../components/Meme';
 
 import './styles.css';
 
-class MemeGenerator extends Component {
+class Generator extends Component {
     state = {
         topText: '',
         bottomText: '',
@@ -56,14 +57,11 @@ class MemeGenerator extends Component {
 
                     <button>Download</button>
                 </form>
-                <div className='meme'>
-                    <img src={this.state.randomImg} alt='' />
-                    <h2 className='top'>{this.state.topText}</h2>
-                    <h2 className='bottom'>{this.state.bottomText}</h2>
-                </div>
+
+                <Meme randomImg={this.state.randomImg} topText={this.state.topText} bottomText={this.state.bottomText}/>
             </div>
         )
     }
 }
 
-export default MemeGenerator;
+export default Generator;

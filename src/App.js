@@ -1,12 +1,12 @@
 import React from 'react';
 import Header from './components/Header';
-import MemeGenerator from './pages/MemeGenerator';
+import Generator from './pages/Generator';
 
 function App() {
   return (
     <div>
       <Header />
-      <MemeGenerator />
+      <Generator />
     </div>
   );
 }
