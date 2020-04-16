@@ -14,8 +14,7 @@ export default function Generator() {
             .then(response => response.json())
             .then(response => {
                 const { memes } = response.data
-                console.log(response.data)
-                setAllMemeImgs({allMemeImgs: memes})
+                setAllMemeImgs(memes)
             })
     }, []);
 
@@ -24,7 +23,7 @@ export default function Generator() {
 
         const randomIndex = Math.floor(Math.random() * allMemeImgs.length);
         const randomMemeImg = allMemeImgs[randomIndex].url 
-        setRandomImg({randomImg: randomMemeImg})
+        setRandomImg(randomMemeImg)
     }
 
     return(
